@@ -47,7 +47,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function updateBanner() {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const response = await fetch(https://script.google.com/macros/s/AKfycbzM-2oj-adfM-9fXdTW-LPfH3i7d1C4kgIa4NBngfB-K-0xjJHR7eZ7_6yw8TMlfYpg/exec); // Replace with your web app URL</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const response = await fetch("https://script.google.com/macros/s/AKfycbzM-2oj-adfM-9fXdTW-LPfH3i7d1C4kgIa4NBngfB-K-0xjJHR7eZ7_6yw8TMlfYpg/exec"); // Replace with your web app URL</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const text = await response.text();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('bannerText').textContent = text;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
