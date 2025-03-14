@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrolling Banner</title>
+    <style>
+        body {
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+        .scrolling-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .scrolling-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 30s linear infinite; /* Increased scroll time */
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="scrolling-container">
+        <div class="scrolling-text" id="bannerText">Loading...</div>
+    </div>
+    <script>
+        async function updateBanner() {
+            try {
+                const response = await fetch(https://script.google.com/macros/s/AKfycbzM-2oj-adfM-9fXdTW-LPfH3i7d1C4kgIa4NBngfB-K-0xjJHR7eZ7_6yw8TMlfYpg/exec); // Replace with your web app URL
+                const text = await response.text();
+                document.getElementById('bannerText').textContent = text;
+            } catch (error) {
+                console.error('Error fetching banner data:', error);
+            }
+        }
+        updateBanner();
+        setInterval(updateBanner, 5000);
+    </script>
+</body>
+</html>
